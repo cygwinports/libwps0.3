@@ -1,0 +1,27 @@
+NAME="libwps0.3"
+VERSION=0.3.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="MS Works word processor format library"
+DESCRIPTION="libwps is a library (for use by word procesors, for example) for
+importing the Microsoft Works word processor file format."
+HOMEPAGE="http://libwps.sourceforge.net/"
+SRC_URI="mirror://sourceforge/libwps/libwps-${VERSION}.tar.gz"
+SRC_DIR="libwps-${VERSION}"
+PATCH_URI="
+	0.2.4-vpath.patch
+"
+
+PKG_NAMES="libwps-tools ${NAME}_3 ${NAME}-devel ${NAME}-doc"
+libwps_tools_CATEGORY="Text"
+libwps_tools_OBSOLETES="libwps-bin"
+libwps_tools_SUMMARY=${SUMMARY/library/utilities}
+libwps_tools_CONTENTS="usr/bin/w?s*"
+libwps0_3_3_CONTENTS="--exclude=html usr/bin/*-0.3-3.dll usr/share/doc/"
+libwps0_3_devel_CONTENTS="usr/include/ usr/lib/"
+libwps0_3_doc_CONTENTS="usr/share/doc/${NAME}/html/"
+
+# FTBFS with -Werror=unused-local-typedefs
+CYGCONF_ARGS="--disable-werror"
+
+KEEP_LA_FILES="none"
