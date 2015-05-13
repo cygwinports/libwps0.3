@@ -1,6 +1,6 @@
 NAME="libwps0.3"
 VERSION=0.3.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="MS Works word processor format library"
 DESCRIPTION="libwps is a library (for use by word procesors, for example) for
