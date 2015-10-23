@@ -3,7 +3,7 @@ VERSION=0.3.1
 RELEASE=3
 CATEGORY="Libs"
 SUMMARY="MS Works word processor format library"
-DESCRIPTION="libwps is a library (for use by word procesors, for example) for
+DESCRIPTION="libwps is a library (for use by word processors, for example) for
 importing the Microsoft Works word processor file format."
 HOMEPAGE="http://libwps.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libwps/libwps-${VERSION}.tar.gz"
